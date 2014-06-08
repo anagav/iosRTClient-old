@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BoxOfficeViewController.h"
 
 @implementation AppDelegate
 
@@ -15,6 +16,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    BoxOfficeViewController *vc = [[BoxOfficeViewController alloc] initWithNibName:@"BoxOfficeViewController" bundle:nil];
+    self.window.rootViewController=vc;
+     
     [self.window makeKeyAndVisible];
     return YES;
 }
